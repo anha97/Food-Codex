@@ -1,0 +1,7 @@
+<p>random-meal works!</p>
+<div *ngFor='let food of foods; let index1 = index'>
+    <p>Food {{ index1 + 1 }}: {{ food.name }}</p>
+    <ol>
+        <li *ngFor='let ingredient of food.ingredient; let index2 = index'>Food {{ index1 + 1 }}'s ingredient: {{ food.ingredient[index2] }}</li>
+    </ol>
+</div>
