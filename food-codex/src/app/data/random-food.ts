@@ -3,6 +3,7 @@ export class RandomFood {
     id:string;
     category:string;
     ingredient:string[];
+    measure:string[];
     instruction:string;
     imageURL:string;
     source:string;
@@ -13,9 +14,12 @@ export class RandomFood {
         this.id = object.idMeal;
         this.category = object.strCategory;
         this.ingredient = [];
+        this.measure = [];
         // for(var i = 0; i < 20; i++){ // Not sure how to loop this...
         //     this.ingredient.push(object.strIngredient1);
         // }
+
+        // StrIngredient
         if(object.strIngredient1 !== "" || object.strIngredient1 !== null){
             this.ingredient.push(object.strIngredient1);
         }
@@ -77,7 +81,69 @@ export class RandomFood {
             this.ingredient.push(object.strIngredient20);
         }
 
-        // There are measurements for each ingredients. It's up to you guys if you want to add them.
+        //StrMeasure
+        if(object.strMeasure1 !== "" || object.strMeasure1 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure2 !== "" || object.strMeasure2 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure3 !== "" || object.strMeasure3 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure4 !== "" || object.strMeasure4 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure5 !== "" || object.strMeasure5 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure6 !== "" || object.strMeasure6 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure7 !== "" || object.strMeasure7 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure8 !== "" || object.strMeasure8 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure9 !== "" || object.strMeasure9 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure10 !== "" || object.strMeasure10 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure11 !== "" || object.strMeasure11 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure12 !== "" || object.strMeasure12 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure13 !== "" || object.strMeasure13 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure14 !== "" || object.strMeasure14 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure15 !== "" || object.strMeasure15 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure16 !== "" || object.strMeasure16 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure17 !== "" || object.strMeasure17 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure18 !== "" || object.strMeasure18 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure19 !== "" || object.strMeasure19 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+        if(object.strMeasure20 !== "" || object.strMeasure20 !== null){
+            this.ingredient.push(object.strMeasure1);
+        }
+
+        // There are measurements for each ingredients. It's up to you guys if you want to add them. <-- ya
 
         this.instruction = object.strInstructions;
         this.imageURL = object.strMealThumb;
