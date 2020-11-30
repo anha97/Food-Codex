@@ -19,6 +19,7 @@ export class RandomMealComponent implements OnInit {
   getRandom() {
     for(var i = 0; i < 20; i++){
       this.codex.fetchRandom().then((response) => {
+        console.log(response);
         this.foods.push(response);
       });
     }
