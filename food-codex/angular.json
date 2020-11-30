@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "food-codex"
+  "defaultProject": "food-codex",
+  "cli": {
+    "analytics": "557a2e1e-d52b-4075-9c8a-4733f3430e25"
+  }
 }

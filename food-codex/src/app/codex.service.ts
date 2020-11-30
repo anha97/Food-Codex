@@ -10,10 +10,15 @@ export class CodexService {
 
   constructor(private http:HttpClient) { }
 
+  private sendRequest():Promise<any> {
+    let promise = this.http.get(this.randMeal).toPromise();
+    return Promise.resolve(promise); 
+  }
+
   fetchRandom(){
-    return this.http.get(this.randMeal).toPromise().then((response) => {
-      console.log(response);
-      return new RandomFood(response.meals[0]);
+    return this.sendRequest().then((response) => {
+      //return new RandomFood(response.meals[0]);
+      return new RandomFood(response['meals'][0]);
     });
   }
 }
