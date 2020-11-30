@@ -82,65 +82,65 @@ export class RandomFood {
         }
 
         //StrMeasure
-        if(object.strMeasure1 !== "" || object.strMeasure1 !== null){
+        if(object.strMeasure1 !== "" && object.strMeasure1 !== null){
             this.measure.push(object.strMeasure1);
         }
-        if(object.strMeasure2 !== "" || object.strMeasure2 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure2 !== "" && object.strMeasure2 !== null){
+            this.measure.push(object.strMeasure2);
         }
-        if(object.strMeasure3 !== "" || object.strMeasure3 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure3 !== "" && object.strMeasure3 !== null){
+            this.measure.push(object.strMeasure3);
         }
-        if(object.strMeasure4 !== "" || object.strMeasure4 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure4 !== "" && object.strMeasure4 !== null){
+            this.measure.push(object.strMeasure4);
         }
-        if(object.strMeasure5 !== "" || object.strMeasure5 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure5 !== "" && object.strMeasure5 !== null){
+            this.measure.push(object.strMeasure5);
         }
-        if(object.strMeasure6 !== "" || object.strMeasure6 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure6 !== "" && object.strMeasure6 !== null){
+            this.measure.push(object.strMeasure6);
         }
-        if(object.strMeasure7 !== "" || object.strMeasure7 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure7 !== "" && object.strMeasure7 !== null){
+            this.measure.push(object.strMeasure7);
         }
-        if(object.strMeasure8 !== "" || object.strMeasure8 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure8 !== "" && object.strMeasure8 !== null){
+            this.measure.push(object.strMeasure8);
         }
-        if(object.strMeasure9 !== "" || object.strMeasure9 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure9 !== "" && object.strMeasure9 !== null){
+            this.measure.push(object.strMeasure9);
         }
-        if(object.strMeasure10 !== "" || object.strMeasure10 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure10 !== "" && object.strMeasure10 !== null){
+            this.measure.push(object.strMeasure10);
         }
-        if(object.strMeasure11 !== "" || object.strMeasure11 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure11 !== "" && object.strMeasure11 !== null){
+            this.measure.push(object.strMeasure11);
         }
-        if(object.strMeasure12 !== "" || object.strMeasure12 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure12 !== "" && object.strMeasure12 !== null){
+            this.measure.push(object.strMeasure12);
         }
-        if(object.strMeasure13 !== "" || object.strMeasure13 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure13 !== "" && object.strMeasure13 !== null){
+            this.measure.push(object.strMeasure13);
         }
-        if(object.strMeasure14 !== "" || object.strMeasure14 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure14 !== "" && object.strMeasure14 !== null){
+            this.measure.push(object.strMeasure14);
         }
-        if(object.strMeasure15 !== "" || object.strMeasure15 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure15 !== "" && object.strMeasure15 !== null){
+            this.measure.push(object.strMeasure15);
         }
-        if(object.strMeasure16 !== "" || object.strMeasure16 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure16 !== "" && object.strMeasure16 !== null){
+            this.measure.push(object.strMeasure16);
         }
-        if(object.strMeasure17 !== "" || object.strMeasure17 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure17 !== "" && object.strMeasure17 !== null){
+            this.measure.push(object.strMeasure17);
         }
-        if(object.strMeasure18 !== "" || object.strMeasure18 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure18 !== "" && object.strMeasure18 !== null){
+            this.measure.push(object.strMeasure18);
         }
-        if(object.strMeasure19 !== "" || object.strMeasure19 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure19 !== "" && object.strMeasure19 !== null){
+            this.measure.push(object.strMeasure19);
         }
-        if(object.strMeasure20 !== "" || object.strMeasure20 !== null){
-            this.measure.push(object.strMeasure1);
+        if(object.strMeasure20 !== "" && object.strMeasure20 !== null){
+            this.measure.push(object.strMeasure20);
         }
 
         // There are measurements for each ingredients. It's up to you guys if you want to add them. <-- ya
