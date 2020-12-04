@@ -10,7 +10,7 @@ export class RandomFood {
     nationality:string;
 
     constructor(object:any){
-      console.log(object);
+      // console.log(object);
         this.name = object.strMeal;
         this.id = object.idMeal;
         this.category = object.strCategory;

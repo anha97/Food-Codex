@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { RandomFood } from '../app/data/random-food';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'food-codex';
+  food?:RandomFood;
+
+  selectedFood(selected:RandomFood){
+    this.food = selected;
+    console.log(this.food);
+  }
 }

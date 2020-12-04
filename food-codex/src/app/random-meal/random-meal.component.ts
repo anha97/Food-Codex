@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { RandomFood } from 'src/app/data/random-food';
 import { CodexService } from '../codex.service';
 
@@ -9,6 +9,9 @@ import { CodexService } from '../codex.service';
 })
 export class RandomMealComponent implements OnInit {
   foods:RandomFood[] = [];
+  rowFoods:any[] = [];  // 2D array for rows of boxes (cards for bootstrap 4)
+  selectedFood?:RandomFood;
+  @Output() parentFood = new EventEmitter();
 
   constructor(private codex:CodexService) { }
 
@@ -17,11 +20,29 @@ export class RandomMealComponent implements OnInit {
   }
 
   getRandom() {
+    var check = 0;
+    var testFood:any = [];
     for(var i = 0; i < 20; i++){
       this.codex.fetchRandom().then((response) => {
         this.foods.push(response);
+        testFood.push(response);
+        check++;
+        if(check == 3){
+          check = 0;
+          this.rowFoods.push(testFood);
+          testFood = [];
+        }
       });
     }
+    console.log(this.rowFoods);
   }
+
+  EventForFood(event:any){
+    // console.log('Button clicked!');
+    this.selectedFood = event;
+    // console.log(this.selectedFood);
+    this.parentFood.emit(this.selectedFood);
+  }
+
 
 }
