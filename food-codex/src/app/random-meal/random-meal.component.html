@@ -10,7 +10,7 @@ EMAIL: anha1@uci.edu
     <div>
         <div class="row" *ngFor='let rowF of rowFoods; let index1 = index'>
             <div class="col" *ngFor='let food of rowF'>
-              <app-random-meal-card [food]="food"></app-random-meal-card>
+              <app-random-meal-card [food]="food" (childFood)='EventForFood($event)'></app-random-meal-card>
                 <!-- <div class="card">
                     <img class="card-img-top" src="{{ food.imageURL }}" alt="{{ food.name }}">
                     <h5 class="card-title">{{ food.name }}</h5>
