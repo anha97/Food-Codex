@@ -1,0 +1,13 @@
+#title {
+  font-family: 'Nerko One', cursive;
+  font-size: 24px;
+  color: white;
+}
+
+.navbar-custom {
+  background-color: #FF9933;
+}
+
+body, html {
+    height: 100%;
+}

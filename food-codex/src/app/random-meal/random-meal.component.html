@@ -6,61 +6,23 @@ WRITTEN BY: Andrew Ha
 EMAIL: anha1@uci.edu
 -->
 
-<head>
-  <meta charset="utf-8">
-  <meta name="author" content="Andrew Ha">
-  <meta name="description" content="Home Page">
-   <!-- you would link to an external stylesheet here! -->
-
-   <!-- you would also link to Bootstrap here! -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <title>Food Codex</title>
-</head>
-
 <body>
     <div>
         <div class="row" *ngFor='let rowF of rowFoods; let index1 = index'>
-            <div class="col-3" *ngFor='let food of rowF'>
-                <!-- <p>{{ food.name }}</p> -->
-                <div class="card">
+            <div class="col" *ngFor='let food of rowF'>
+              <app-random-meal-card [food]="food"></app-random-meal-card>
+                <!-- <div class="card">
                     <img class="card-img-top" src="{{ food.imageURL }}" alt="{{ food.name }}">
-                </div>
-                <h5 class="card-title">{{ food.name }}</h5>
-                <p>Nationality: {{ food.nationality }}</p>
-                <p>Category: {{ food.category }}</p>
-                <button type="button" class="btn btn-dark" (click)='EventForFood(food)'>Description</button>
+                    <h5 class="card-title">{{ food.name }}</h5>
+                    <p>Area: {{ food.area }}</p>
+                    <p>Category: {{ food.category }}</p>
+                    <button type="button" class="btn btn-dark" (mouseover)='EventForFood(food)'>Description</button>
+                </div> -->
+
                 <!-- Find a way to add the component that will display on the right side, based on what food you clicked. -->
             </div>
         </div>
     </div>
-    <!-- <div *ngFor='let food of foods; let index1 = index'>
-        <div class="row">
-            <div class="col-2">
-                Test1
-            </div>
-            <div class="col-2">
-                Test2
-            </div>
-            <div class="col-2">
-                Test3
-            </div>
-            <div class="col-2">
-                Test4
-            </div>
-        </div>
-        <p>Food {{ index1 + 1 }}: {{ food.name }}</p>
-        <ol>
-            <li *ngFor='let ingredient of food.ingredient; let index2 = index'>Food {{ index1 + 1 }}'s ingredient: {{ food.ingredient[index2] }}</li>
-        </ol>
-        <ol>
-            <li *ngFor='let ingredient of food.ingredient; let index2 = index'>Food {{ index1 + 1 }}'s measure: {{ food.measure[index2] }}</li>
-        </ol>
-    </div> -->
-  <!-- <app-random-meal></app-random-meal> -->
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
 </html>

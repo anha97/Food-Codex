@@ -1,10 +1,19 @@
 <p>display-food works!</p>
 <!-- Empty food section if the user didn't select any of the foods... -->
-<div *ngIf='food === undefined'>
-    <h1>Empty</h1>
+<div class="container-fluid">
+
+  <div *ngIf='food === undefined'>
+      <h1>Empty</h1>
+  </div>
+  This div will display if only and if
+  <div *ngIf='food !== undefined'>
+      <img [src]="food.imageURL" class="img-fluid" alt="{{food.name}}">
+      <h1>{{ food.name }}</h1>
+      <ul *ngFor="let ingredient of food.ingredients">
+        <li>{{ ingredient }}</li>
+      </ul>
+
+  </div>
+  <button (click)='test()'>Click me!</button>
+
 </div>
-This div will display if only and if 
-<div *ngIf='food !== undefined'>
-    <h1>{{ food.name }}</h1>
-</div>
-<button (click)='test()'>Click me!</button>

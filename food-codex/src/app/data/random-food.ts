@@ -2,33 +2,33 @@ export class RandomFood {
     name:string;
     id:string;
     category:string;
-    ingredient:string[];
-    measure:string[];
-    instruction:string;
+    ingredients:string[];
+    measurements:string[];
+    instructions:string;
     imageURL:string;
     source:string;
-    nationality:string;
+    area:string;
 
     constructor(object:any){
       // console.log(object);
         this.name = object.strMeal;
         this.id = object.idMeal;
         this.category = object.strCategory;
-        this.ingredient = [];
-        this.measure = [];
+        this.ingredients = [];
+        this.measurements = [];
 
         Object.keys(object).forEach((element) => {
           if (element.includes("strIngredient") && !(object[element] === "") && !(object[element] === null)) {
-            this.ingredient.push(object[element]);
+            this.ingredients.push(object[element]);
           }
           if (element.includes("strMeasure") && !(object[element] === "") && !(object[element] === null)) {
-            this.measure.push(object[element]);
+            this.measurements.push(object[element]);
           }
         })
 
-        this.instruction = object.strInstructions;
+        this.instructions = object.strInstructions;
         this.imageURL = object.strMealThumb;
         this.source = object.strSource;
-        this.nationality = object.strArea;
+        this.area = object.strArea;
     }
 }

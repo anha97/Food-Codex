@@ -1,0 +1,14 @@
+.card {
+  width: 180px;
+  height: 325px;
+}
+
+h5 {
+  font-family: 'Castoro', serif;
+  font-size: 19px;
+}
+
+small {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+}

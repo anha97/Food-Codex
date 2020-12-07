@@ -27,7 +27,7 @@ export class RandomMealComponent implements OnInit {
         this.foods.push(response);
         testFood.push(response);
         check++;
-        if(check == 3){
+        if(check == 4){
           check = 0;
           this.rowFoods.push(testFood);
           testFood = [];
