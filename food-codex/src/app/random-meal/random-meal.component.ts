@@ -21,27 +21,33 @@ export class RandomMealComponent implements OnInit {
 
   getRandom() {
     var check = 0;
-    var testFood:any = [];
+    var colFood:any = [];
     for(var i = 0; i < 20; i++){
       this.codex.fetchRandom().then((response) => {
         this.foods.push(response);
-        testFood.push(response);
+        colFood.push(response);
         check++;
         if(check == 4){
           check = 0;
-          this.rowFoods.push(testFood);
-          testFood = [];
+          this.rowFoods.push(colFood);
+          colFood = [];
         }
       });
     }
     console.log(this.rowFoods);
   }
 
-  EventForFood(event:any){
-    // console.log('Button clicked!');
-    this.selectedFood = event;
-    // console.log(this.selectedFood);
+  mouseOverFood(event:any){
+    this.parentFood.emit(event);
+  }
+
+  mouseOutFood(){
     this.parentFood.emit(this.selectedFood);
+  }
+
+  EventForFood(event:any){
+    this.selectedFood = event;
+    this.parentFood.emit(event);
   }
 
 

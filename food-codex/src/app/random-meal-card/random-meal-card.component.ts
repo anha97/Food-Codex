@@ -9,18 +9,24 @@ import { RandomFood } from 'src/app/data/random-food';
 export class RandomMealCardComponent implements OnInit {
   @Input() food!: RandomFood;
   @Output() childFood = new EventEmitter();
-  selectedFood?:RandomFood;
+  @Output() mouseOutFood = new EventEmitter();
+  @Output() mouseOverFood = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  hoverEffect(event:any){
+    this.mouseOverFood.emit(event);
+  }
+
+  hoverEffectOut(event:any){
+    this.mouseOutFood.emit(event);
+  }
+
   EventForFood(event:any){
-    // console.log('Button clicked!');
-    this.selectedFood = event;
-    // console.log(this.selectedFood);
-    this.childFood.emit(this.selectedFood);
+    this.childFood.emit(event);
   }
 
 }

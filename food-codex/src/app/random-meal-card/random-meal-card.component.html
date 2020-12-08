@@ -1,4 +1,4 @@
-<div class="card my-2">
+<div class="card my-2" (mouseover)='hoverEffect(food)' (mouseout)='hoverEffectOut(food)'>
     <img class="card-img-top" src="{{ food.imageURL }}" alt="{{ food.name }}">
     <h5 class="card-title pt-2 px-1 pb-0">{{ food.name }}</h5>
     <small class="text-muted px-1 pt-0">{{ food.area }} · {{ food.category }}</small>
