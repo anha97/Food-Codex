@@ -15,6 +15,28 @@ export class CodexService {
     return Promise.resolve(promise); 
   }
 
+  private sendFilter(category:string):Promise<any> {
+    let promise = this.http.get("https://www.themealdb.com/api/json/v1/1/filter.php?c=" + category).toPromise();
+    return Promise.resolve(promise);
+  }
+
+  private sendId(id:string):Promise<any>{
+    let promise = this.http.get("https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id).toPromise();
+    return Promise.resolve(promise);
+  }
+
+  fetchFilter(category:string){
+    return this.sendFilter(category).then((response) => {
+      return response['meals'];
+    })
+  }
+
+  fetchID(id:string){
+    return this.sendId(id).then((response) => {
+      return new RandomFood(response['meals'][0]);
+    })
+  }
+
   fetchRandom(){
     return this.sendRequest().then((response) => {
       //return new RandomFood(response.meals[0]);
