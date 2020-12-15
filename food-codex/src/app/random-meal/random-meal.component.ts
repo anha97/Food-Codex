@@ -50,5 +50,9 @@ export class RandomMealComponent implements OnInit {
     this.parentFood.emit(event);
   }
 
+  doThis() {
+    console.log("clicked category");
+  }
+
 
 }

@@ -8,6 +8,37 @@ EMAIL: anha1@uci.edu
 
 <body>
     <div>
+      <div class="row">
+        <div class="col">
+
+          <nav class="navbar navbar-expand-lg navbar-light bg-clear">
+            <a class="navbar-brand">View Category:</a>
+
+              <div>
+                <ul class="navbar-nav">
+                  <li class="nav-item" (click)="doThis()"><a class="nav-link" href="#">Beef</a></li>
+                  <li class="nav-item">Breakfast</li>
+                  <li class="nav-item">Chicken</li>
+                  <li class="nav-item">Dessert</li>
+                  <li class="nav-item">Goat</li>
+                  <li class="nav-item">Lamb</li>
+                  <li class="nav-item">Misc</li>
+                  <li class="nav-item">Pasta</li>
+                  <li class="nav-item">Pork</li>
+                  <li class="nav-item">Seafood</li>
+                  <li class="nav-item">Side</li>
+                  <li class="nav-item">Starter</li>
+                  <li class="nav-item">Vegan</li>
+                  <li class="nav-item">Vegetarian</li>
+                </ul>
+              </div>
+          </nav>
+
+        </div>
+
+      </div>
+
+
         <div class="row" *ngFor='let rowF of rowFoods; let index1 = index'>
             <div class="col" *ngFor='let food of rowF'>
               <app-random-meal-card [food]="food" (childFood)='EventForFood($event)' (mouseOutFood)='mouseOutFood()' (mouseOverFood)='mouseOverFood($event)'></app-random-meal-card>
