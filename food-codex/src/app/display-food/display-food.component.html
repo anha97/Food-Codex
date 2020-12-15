@@ -1,19 +1,29 @@
-<p>display-food works!</p>
 <!-- Empty food section if the user didn't select any of the foods... -->
 <div class="container-fluid">
 
   <div *ngIf='food === undefined'>
-      <h1>Empty</h1>
+      <h1>Hover over a card to view more info</h1>
+      <h5>... and click "select" to display it here!</h5>
   </div>
-  This div will display if only and if
+  <!-- This div will display if only and if -->
   <div *ngIf='food !== undefined'>
       <img [src]="food.imageURL" class="img-fluid" alt="{{food.name}}">
       <h1>{{ food.name }}</h1>
-      <ul *ngFor="let ingredient of food.ingredients">
-        <li>{{ ingredient }}</li>
+
+      <h5>Ingredients:</h5>
+      <ul *ngFor="let ingredient of food.ingredients; let i = index">
+        <li>{{ food.ingredients[i] }} - {{ food.measurements[i] }}</li>
       </ul>
 
-  </div>
-  <button (click)='test()'>Click me!</button>
+      <h5>Instructions:</h5>
+      <p>{{ food.instructions }}</p>
 
+      <h5>Watch:</h5>
+      <!-- <iframe class="e2e-iframe-trusted-src" width="auto" height="175"
+      [src]="food.youtubeURL">
+      </iframe> -->
+
+      <h5><a target="_blank" rel="noopener noreferrer" [href]="food.source">Source</a></h5>
+
+  </div>
 </div>

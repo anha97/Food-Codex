@@ -9,14 +9,9 @@ import { RandomFood } from 'src/app/data/random-food';
 export class DisplayFoodComponent implements OnInit {
   @Input() food?:RandomFood;  // Have to make the property optional (?) in order to stop getting initialzer error...
 
-  constructor() { }
-
-  ngOnInit(): void {
-    this.test();
+  constructor() {
   }
 
-  test(){
-    console.log(this.food);
+  ngOnInit() {
   }
-
 }

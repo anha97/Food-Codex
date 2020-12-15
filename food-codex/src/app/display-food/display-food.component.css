@@ -1,0 +1,19 @@
+h1 {
+  font-family: 'Castoro', serif;
+
+}
+h5 {
+  font-family: 'Castoro', serif;
+  font-size: 19px;
+}
+
+p, li {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  white-space: pre-line;
+  white-space: pre-wrap;
+}
+
+body,html {
+  height: 100%;
+}
