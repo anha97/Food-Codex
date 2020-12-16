@@ -1,4 +1,5 @@
 export class RandomFood {
+  // All necessary information for right-most display
     name:string;
     id:string;
     category:string;
@@ -18,9 +19,11 @@ export class RandomFood {
         this.measurements = [];
 
         Object.keys(object).forEach((element) => {
+          // Get ingredients for a random food
           if (element.includes("strIngredient") && !(object[element] === "") && !(object[element] === null)) {
             this.ingredients.push(object[element]);
           }
+          // Get measurements of ingredients for a random food
           if (element.includes("strMeasure") && !(object[element] === "") && !(object[element] === null)) {
             this.measurements.push(object[element]);
           }

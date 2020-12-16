@@ -10,7 +10,10 @@ import { CodexService } from '../codex.service';
 export class RandomMealComponent implements OnInit {
   rowFoods:any[] = [];  // 2D array for rows of boxes (cards for bootstrap 4)
   selectedFood?:RandomFood;
+  
+  // SO MANY FOOD CATEGORIES!!!
   category:string[] = ["Beef", "Chicken", "Dessert", "Lamb", "Miscellaneous", "Pasta", "Pork", "Seafood", "Side", "Starter", "Vegan", "Vegetarian", "Breakfast", "Goat"]
+  
   beefRow:any[] = [];
   chickenRow:any[] = [];
   dessertRow:any[] = [];

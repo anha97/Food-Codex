@@ -17,10 +17,12 @@ export class RandomMealCardComponent implements OnInit {
   ngOnInit() {
   }
 
+  // When mouse hovers over a card it displays its information on the right side of screen 
   hoverEffect(event:any){
     this.mouseOverFood.emit(event);
   }
 
+  // When mouse hovers off a card the display on the right disappears
   hoverEffectOut(event:any){
     this.mouseOutFood.emit(event);
   }
