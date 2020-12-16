@@ -8,7 +8,6 @@ import { CodexService } from '../codex.service';
   styleUrls: ['./random-meal.component.css']
 })
 export class RandomMealComponent implements OnInit {
-  foods:RandomFood[] = [];
   rowFoods:any[] = [];  // 2D array for rows of boxes (cards for bootstrap 4)
   selectedFood?:RandomFood;
   category:string[] = ["Beef", "Chicken", "Dessert", "Lamb", "Miscellaneous", "Pasta", "Pork", "Seafood", "Side", "Starter", "Vegan", "Vegetarian", "Breakfast", "Goat"]
@@ -31,13 +30,11 @@ export class RandomMealComponent implements OnInit {
   constructor(private codex:CodexService) { }
 
   ngOnInit(): void {
-    // this.getRandom();
     this.getAllData();
   }
 
   // Assign values into the category array
   getID(response:any, row:any[], category:string){
-    console.log(response.length);
     var check = 0;
     var colFood:any = [];
     for(var j = 0; j < response.length; j++){
@@ -62,7 +59,6 @@ export class RandomMealComponent implements OnInit {
   // This is where it will acquire all foods from all categories.
   getAllData(){
     for(var i = 0; i < this.category.length; i++){
-      console.log(this.category[i]);
       if (this.category[i] == "Beef"){
         this.codex.fetchFilter(this.category[i]).then((response) => {
           this.getID(response, this.beefRow, "Beef");
@@ -115,7 +111,6 @@ export class RandomMealComponent implements OnInit {
       }
       else if(this.category[i] == "Vegan"){
         this.codex.fetchFilter(this.category[i]).then((response) => {
-          console.log(response);
           this.getID(response, this.veganRow, "Vegan");
         });
       }
@@ -184,26 +179,6 @@ export class RandomMealComponent implements OnInit {
       this.rowFoods = this.vegetarianRow
     }
   }
-
-  getRandom() {
-    var check = 0;
-    var colFood:any = [];
-    for(var i = 0; i < 20; i++){
-      this.codex.fetchRandom().then((response) => {
-        this.foods.push(response);
-        colFood.push(response);
-        check++;
-        if(check == 4){
-          check = 0;
-          this.rowFoods.push(colFood);
-          colFood = [];
-        }
-      });
-    }
-    // console.log(this.rowFoods);
-  }
-
-
 
   mouseOverFood(event:any){
     this.parentFood.emit(event);

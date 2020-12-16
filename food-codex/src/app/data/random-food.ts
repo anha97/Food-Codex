@@ -11,7 +11,6 @@ export class RandomFood {
     youtubeURL:any;
 
     constructor(object:any){
-      // console.log(object);
         this.name = object.strMeal;
         this.id = object.idMeal;
         this.category = object.strCategory;

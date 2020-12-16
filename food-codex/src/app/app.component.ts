@@ -11,7 +11,5 @@ export class AppComponent {
 
   selectedFood(selected:RandomFood){
     this.food = selected;
-    console.log(this.food);
-
   }
 }

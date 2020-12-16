@@ -7,7 +7,7 @@ import { RandomFood } from 'src/app/data/random-food';
   styleUrls: ['./display-food.component.css']
 })
 export class DisplayFoodComponent implements OnInit {
-  @Input() food?:RandomFood;  // Have to make the property optional (?) in order to stop getting initialzer error...
+  @Input() food?:RandomFood;
 
   constructor() {
   }

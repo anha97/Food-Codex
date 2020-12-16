@@ -6,14 +6,8 @@ import { RandomFood } from 'src/app/data/random-food';
   providedIn: 'root'
 })
 export class CodexService {
-  randMeal:string = "https://www.themealdb.com/api/json/v1/1/random.php";
 
   constructor(private http:HttpClient) { }
-
-  private sendRequest():Promise<any> {
-    let promise = this.http.get(this.randMeal).toPromise();
-    return Promise.resolve(promise); 
-  }
 
   private sendFilter(category:string):Promise<any> {
     let promise = this.http.get("https://www.themealdb.com/api/json/v1/1/filter.php?c=" + category).toPromise();
@@ -35,12 +29,5 @@ export class CodexService {
     return this.sendId(id).then((response) => {
       return new RandomFood(response['meals'][0]);
     })
-  }
-
-  fetchRandom(){
-    return this.sendRequest().then((response) => {
-      //return new RandomFood(response.meals[0]);
-      return new RandomFood(response['meals'][0]);
-    });
   }
 }
