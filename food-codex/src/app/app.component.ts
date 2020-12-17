@@ -9,6 +9,7 @@ import { RandomFood } from '../app/data/random-food';
 export class AppComponent {
   food?:RandomFood;
 
+  // Get food from click or hover event
   selectedFood(selected:RandomFood){
     this.food = selected;
   }

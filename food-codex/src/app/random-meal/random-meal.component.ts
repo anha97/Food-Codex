@@ -46,6 +46,7 @@ export class RandomMealComponent implements OnInit {
         colFood.push(data);
         check++;
         if(check == 4){
+          // Push 4 columns per row
           check = 0;
           row.push(colFood);
           colFood = [];
@@ -201,10 +202,12 @@ export class RandomMealComponent implements OnInit {
     }
   }
 
+  // Mouse hovers over a food to trigger display on right
   mouseOverFood(event:any){
     this.parentFood.emit(event);
   }
 
+  // Mouse hovers off a food to remove display on right
   mouseOutFood(){
     this.parentFood.emit(this.selectedFood);
   }
