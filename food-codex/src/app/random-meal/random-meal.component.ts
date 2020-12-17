@@ -33,6 +33,7 @@ export class RandomMealComponent implements OnInit {
   constructor(private codex:CodexService) { }
 
   ngOnInit(): void {
+    this.getRandom();
     this.getAllData();
   }
 
@@ -133,7 +134,6 @@ export class RandomMealComponent implements OnInit {
         });
       }
     }
-    this.rowFoods = this.beefRow;
   }
 
   // Filter foods after click event (from the tab)
@@ -180,6 +180,24 @@ export class RandomMealComponent implements OnInit {
     }
     else{
       this.rowFoods = this.vegetarianRow
+    }
+  }
+
+  // Get 20 random foods
+  getRandom() {
+    var check = 0;
+    var colFood:any = [];
+    this.rowFoods = [];
+    for(var i = 0; i < 20; i++){
+      this.codex.fetchRandom().then((response) => {
+        colFood.push(response);
+        check++;
+        if(check == 4){
+          check = 0;
+          this.rowFoods.push(colFood);
+          colFood = [];
+        }
+      });
     }
   }
 
