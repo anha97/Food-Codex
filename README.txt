@@ -1,4 +1,4 @@
-INF133-FinalProject
+INF133 - Food Codex
 Avineesh Kompella, Andrew Ha, Matthew Corpus
 
 Overview: 
