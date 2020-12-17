@@ -9,7 +9,6 @@ export class RandomFood {
     imageURL:string;
     source:string;
     area:string;
-    youtubeURL:any;
 
     constructor(object:any){
         this.name = object.strMeal;
@@ -33,6 +32,5 @@ export class RandomFood {
         this.imageURL = object.strMealThumb;
         this.source = object.strSource;
         this.area = object.strArea;
-        this.youtubeURL = object.strYoutube;
     }
 }
